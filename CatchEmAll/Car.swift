@@ -20,5 +20,11 @@ class Car: Vehicle {
         super.init(name: name, weight: weight, maxSpeed: maxSpeed)
     }
     
+    func drive() {
+        super.accelerate()
+    }
     
+    func brake() {
+        super.decelerate()
+    }
 }
