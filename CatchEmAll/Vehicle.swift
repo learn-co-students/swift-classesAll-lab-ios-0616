@@ -23,4 +23,31 @@ class Vehicle {
         self.weight = weight
         self.maxSpeed = maxSpeed
     }
+    
+    func goFast() {
+        self.speed = self.maxSpeed
+    }
+    
+    func halt() {
+        self.speed = 0.0
+    }
+    
+    func accelerate() {
+        let acceleratedSpeed = self.speed + self.maxSpeed * 0.1
+        self.speed = min(acceleratedSpeed, self.maxSpeed)
+//        if acceleratedSpeed < self.maxSpeed {
+//            self.speed = acceleratedSpeed
+//        } else {
+//            self.speed = self.maxSpeed
+//        }
+    }
+    
+    func decelerate() {
+        let deceleratedSpeed = self.speed - self.maxSpeed * 0.1
+        self.speed = max(deceleratedSpeed, 0.0)
+    }
+    
+    func turnRight() {
+        
+    }
 }
