@@ -48,6 +48,24 @@ class Vehicle {
     }
     
     func turnRight() {
-        
+        if self.speed > 0.0 {
+            self.speed = self.speed / 2
+            self.heading = (self.heading + 90.0) % 360
+        }
+    }
+    
+    func turnLeft() {
+        if self.speed > 0.0 {
+            self.speed /= 2
+            self.heading = (self.heading - 90.0)
+            if self.heading < 0 {
+                self.heading += 360
+            }
+        }
+    }
+    
+    enum Transmission {
+        case automatic
+        case manual
     }
 }
