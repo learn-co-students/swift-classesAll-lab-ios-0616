@@ -19,7 +19,7 @@ class Plane: Vehicle {
         super.init(name: name, weight: weight, maxSpeed: maxSpeed)
     }
     
-    func takeoff() {
+    func takeOff() {
         if !self.inFlight {
             self.speed = self.maxSpeed * 1/10
             self.altitude = self.maxAltitude * 1/10
